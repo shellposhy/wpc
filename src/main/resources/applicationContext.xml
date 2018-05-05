@@ -30,7 +30,7 @@
 	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
 		<!-- Connection Info -->
 		<property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
-		<property name="url"><value>jdbc:mysql://localhost:3306/cms?useUnicode=true&amp;characterEncoding=UTF-8</value></property>
+		<property name="url"><value>jdbc:mysql://localhost:3306/wpc?useUnicode=true&amp;characterEncoding=UTF-8</value></property>
 		<property name="username"><value>root</value></property>
 		<property name="password"><value></value></property>
 
@@ -58,8 +58,8 @@
 	<bean id="appConfig" class="cn.com.cms.framework.config.AppConfig">
 		<property name="appName" value="新闻发布系统" />
 		<property name="appPath" value="" />
-		<property name="appPathHome" value="D:/resource/cms" />
-		<property name="templatePath" value="D:/resource/cms/template" />
+		<property name="appPathHome" value="D:/resource/wpc" />
+		<property name="templatePath" value="D:/resource/cms/wpc" />
 		<property name="appLogSwitch" value="1"/>
 		<property name="templateHome" value="template" />
 		<property name="adminDataTablePageSize" value="20" />
