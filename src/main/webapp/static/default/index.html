@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>全过程工程咨询网</title>
+	<link href="/static/default/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="/static/default/css/home.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/static/default/script/jquery.js"></script>
+	<script src="/static/default/script/select.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/static/default/script/superslide.2.1.js"></script>
+	<script type="text/javascript" src="/static/default/script/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript">
+		function FloatMenu(){
+			var animationSpeed=1500;
+			var animationEasing='easeOutQuint';
+			var scrollAmount=$(document).scrollTop();
+			var newPosition=menuPosition+scrollAmount;
+			if($(window).height()<$('#fl_menu').height()+$('#fl_menu .menu').height()){
+				$('#fl_menu').css('top',menuPosition);
+			} else {
+				$('#fl_menu').stop().animate({top: newPosition}, animationSpeed, animationEasing);
+			}
+		}
+		$(window).load(function(){
+			menuPosition=$('#fl_menu').position().top;
+			FloatMenu();
+		});
+		$(window).scroll(function(){
+			FloatMenu();
+		});
+		$(document).ready(function(){
+			var fadeSpeed=500;
+			$("#fl_menu").hover(function(){
+				$('#fl_menu .label').fadeTo(fadeSpeed, 1);
+				$("#fl_menu .menu").fadeIn(fadeSpeed);
+			},function(){
+				$('#fl_menu .label').fadeTo(fadeSpeed, 0.75);
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<!--header-->
+	<div id="header">
+		<!-- top -->
+	  <div class="top">
+	    <div class="topT">
+	      <div class="topTL"><a href="#" target="_blank">设为首页</a><a href="#" target="_blank">网站地图</a><a href="#" target="_blank" class="nobg"> 帮助中心</a></div>
+	      <div class="topTR"> <span class="reg">您好，请<a href="#" target="_blank" class="on">登录</a> | <a href="#" target="_blank">注册</a></span> <span class="login">其他方式登录 <a href="#" target="_blank"><img src="/static/default/images/qq.jpg" /></a> <a href="#" target="_blank"><img src="/static/default/images/wb.jpg" /></a></span> </div>
+	    </div>
+	    <div class="topB">
+	      <div class="logo"><a href="#" title="全过程咨询网"><img src="/static/default/images/logo.png"/ width="215" height="90"  alt="全过程咨询网" ></a></div>
+	      <div class="slogan"><img src="/static/default/images/slogan.jpg" /></div>
+	      <div class="hotline"> <span>客服热线:</span><em>400-0000-0000</em> </div>
+	    </div>
+	  </div>
+	  <!-- top// -->
+	  <!--search-->
+	  <div class="search">
+	    <div class="searchbox">
+	      <form action="#" method="get">
+	        <div class="column">
+	          <h1><a href="#" class="hover">全资动态</a></h1>
+	          <h1><a href="#">管理咨询</a></h1>
+	          <h1><a href="#">技术咨询</a></h1>
+	          <h1><a href="#">涉及领域</a></h1>
+	        </div>
+	        <div class="searchM">
+	          <input type="text" class="input" value="请输入搜索内容" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入搜索内容';}"/>
+	          <input type="image" name="imageField" src="/static/default/images/search.jpg"  class="input1"/>
+	        </div>
+	        <div class="select">
+	          <label>
+	          <input type="hidden" id= "isRemember" name="isRemember">
+	          <img id="aa" src="/static/default/images/checkedon.jpg" onclick="myFun(this)" align="absmiddle" > </label>
+	          文章
+	           </div>
+	      </form>
+	    </div>
+	  </div>
+	  <!-- search// -->
+	</div>
+	<div class="clear"></div>
+	<!-- header// -->
+	
+	<!--content-->
+	<div id="container">
+		<!-- news -->
+	  <div class="dynamic">
+	    <div class="column1">
+	      <div class="title"><a href="#" target="_blank" class="more">更多 &gt;</a><h1>国家政策</h1></div>
+	      <ul class="list">
+	        <li><a href="#" target="_blank">中国工程咨询协会部署开展“...</a><span>6-16</span></li>
+			<li><a href="#" target="_blank">中华人民共和国国家发展和...</a><span>6-16</span></li>
+			<li><a href="#" target="_blank">中国工程咨询协会部署开展“...</a><span>6-16</span></li>
+			<li><a href="#" target="_blank">中国工程咨询协会部署开展“...</a><span>6-16</span></li>
+			<li><a href="#" target="_blank">中国工程咨询协会部署开展“...</a><span>6-16</span></li>
+			<li><a href="#" target="_blank">中国工程咨询协会部署开展“...</a><span>6-16</span></li>
+			<li><a href="#" target="_blank">中国工程咨询协会部署开展“...</a><span>6-16</span></li>
+			<li><a href="#" target="_blank">中国工程咨询协会部署开展“...</a><span>6-16</span></li>
+	      </ul>
+	    </div>
+	    <!--picture slider-->
+	    <div class="picshow">
+	      <div class="fullSlide">
+	        <div class="bd">
+	          <ul>
+	            <li><a target="_blank" href="#"><img src="/static/default/images/qh.jpg" width="502" height="266" /></a></li>
+	            <li><a target="_blank" href="#"><img src="/static/default/images/qh1.jpg" width="502" height="266" onload='javascript:if(this.width>502)this.width=502' /> </a></li>
+	          </ul>
+	        </div>
+	        <div class="hd">
+	          <ul>
+	          </ul>
+	        </div>
+	        <span class="prev"></span> <span class="next"></span> </div>
+			<script type="text/javascript">
+				jQuery(".fullSlide").hover(function() {
+					jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+				},
+				function() {
+					jQuery(this).find(".prev,.next").fadeOut()
+				});
+				jQuery(".fullSlide").slide({
+					titCell: ".hd ul",
+					mainCell: ".bd ul",
+					effect: "fold",
+					autoPlay: true,
+					autoPage: true,
+					trigger: "click",
+					startFun: function(i) {
+						var curLi = jQuery(".fullSlide .bd li").eq(i);
+						if ( !! curLi.attr("_src")) {
+							curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+						}
+					}
+				});
+			</script>
+	    </div>
+	    <!--picture slider//-->
+	    <div class="column2">
+	      <div class="title1"><a href="#" target="_blank" class="more">更多 &gt;</a><h1>地方政策</h1></div>
+	      <ul class="list">
+	        <li>·<a href="#" target="_blank">武装分子何以能直逼伊拉克</a></li>
+	        <li>·<a href="#" target="_blank">首都往期300儿童血铅超标</a></li>
+	        <li>·<a href="#" target="_blank">要严查官员渎职评论对白崇禧的夸赞不能</a></li>
+	        <li>·<a href="#" target="_blank">金正恩视察海军部队 乘坐潜艇指导演习</a></li>
+	        <li>·<a href="#" target="_blank">武装分子何以能直逼伊拉克</a></li>
+	        <li>·<a href="#" target="_blank">首都往期300儿童血铅超标</a></li>
+	        <li>·<a href="#" target="_blank">要严查官员渎职评论对白崇禧的夸赞不能</a></li>
+	        <li>·<a href="#" target="_blank">金正恩视察海军部队 乘坐潜艇指导演习</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	  <div class="clear"></div>
+	  <!-- news// -->
+
+	  <!--first floor-->
+	  <div class="column3">
+	    <div class="title2" id="guakaoba">
+	      <h1>全资动态</h1><h2>全过程咨询网</h2><h3>全过程咨询信息一站式发布平台</h3>
+	    </div>
+	    <!--公告-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>动态公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left">
+	          <div class="bd">
+	            <ul class="infoList">
+	              <li>·<a href="#" target="_blank">全过程咨询网</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">全过程咨询网</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">全过程咨询网</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">全过程咨询网</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">全过程咨询网</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">全过程咨询网</a><span>[11-11]</span></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+				jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	      <div class="total">共有 <font class="f_red"><b>152762</b></font> 条帖子</div>
+	    </div>
+	    <!--分类-->
+	    <div class="fenlei">
+	      <div class="title9"></div>
+	      <div class="species1">
+	        <dl>
+	          <dt><a href="#" target="_blank">房屋建筑工程类</a><a href="#" target="_blank">地基与基础工程类</a><a href="#" target="_blank">市政公用工程类</a><a href="#" target="_blank">消防工程类</a><a href="#" target="_blank">钢结构工程类</a><a href="#" target="_blank">建筑幕墙工程类</a><a href="#" target="_blank">安装工程类</a><a href="#" target="_blank">建筑智能化工程类</a></dt>
+	          <dt><a href="#" target="_blank">城市规划师</a><a href="#" target="_blank">爆破工程师</a><a href="#" target="_blank">化工工程师</a><a href="#" target="_blank">环评工程师</a><a href="#" target="_blank">房地产估价师</a><a href="#" target="_blank">注册会计师</a><a href="#" target="_blank">安全评价师</a><a href="#" target="_blank">注册环保工程师</a><a href="#" target="_blank">物业管理师</a></dt>
+	          <dt><a href="#" target="_blank">木工</a><a href="#" target="_blank">架子工</a><a href="#" target="_blank">水暖工</a><a href="#" target="_blank">建筑电工</a><a href="#" target="_blank">模板工</a><a href="#" target="_blank">钢筋工</a><a href="#" target="_blank">油漆工</a><a href="#" target="_blank">抹灰工</a><a href="#" target="_blank">混凝土工 </a></dt>
+	          <dt><a href="#" target="_blank">施工员</a><a href="#" target="_blank">质检员</a><a href="#" target="_blank">安全员</a><a href="#" target="_blank">材料员</a><a href="#" target="_blank">预算员</a><a href="#" target="_blank">机械员</a><a href="#" target="_blank">资料员</a><a href="#" target="_blank">测量员</a></dt>
+	        </dl>
+	        <div class="more1"><a href="#">查看更多 &gt;</a></div>
+	      </div>
+	      <!--相关帖子-->
+	      <div class="clear"></div>
+	      <div class="related">
+	        <!--热门排行-->
+	        <div class="ranking">
+	          <div class="title10">
+	            <h1>热门排行</h1>
+	          </div>
+	          <ul class="list3">
+	            <li><span class="hot"></span><a href="#" target="_blank">能源领域反腐风暴刮向电网 违规资金</a></li>
+	            <li><span class="agree"></span><a href="#" target="_blank">中国持有规模跌至14个月新低</a></li>
+	            <li><span class="news"></span><a href="#" target="_blank">绿盒王老吉净利大跌过半 两大股东</a></li>
+	            <li><span class="news"></span><a href="#" target="_blank">南京楼市库存达3.9万套 拼首付促销</a></li>
+	            <li><a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          </ul>
+	          </ul>
+	        </div>
+	        <!--最新贴-->
+	        <div class="column4">
+	          <div class="title11"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	            <h1>最新贴</h1>
+	          </div>
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">魔兽全服第1玩家打游戏1年 高考涨200分</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list4">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	          </ul>
+	          </ul>
+	        </div>
+	        <!--推荐贴-->
+	        <div class="column4">
+	          <div class="title13"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	            <h1>推荐贴</h1>
+	          </div>
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">长风：美为何将伊拉克这块烫手山芋扔给中国</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list4">
+	            <li><span class="best"></span>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li><span class="best"></span>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li><span class="agree"></span>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li><span class="agree"></span>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <!--资质吧-->
+	  <div class="column5">
+	    <div class="title14" id="zizhiba">
+	      <h1>资质吧</h1>
+	      <h2>有资质才是硬道理</h2>
+	      <h3>本吧专业提供各行业企业资质一条龙的服务</h3>
+	    </div>
+	    <!--公告-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>资质吧公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left1">
+	          <div class="bd">
+	            <ul class="infoList">
+	              <li>·<a href="#" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">施强：高端专业语言教学</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+			jQuery(".txtMarquee-left1").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	      <div class="total">共有 <font class="f_red"><b>152762</b></font> 条帖子</div>
+	    </div>
+	    <!--相关信息-->
+	    <div class="zizhi">
+	      <!--推荐贴-->
+	      <div class="column6">
+	        <div class="title15"><a class="more">更多 &gt;</a>
+	          <h1>推荐贴</h1>
+	        </div>
+	        <ul class="list5">
+	          <li><span class="hot"></span>·<a href="#" target="_blank">能源领域反腐风暴刮向电网 违规资金</a></li>
+	          <li><span class="agree"></span>·<a href="#" target="_blank">中国持有规模跌至14个月新低</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">绿盒王老吉净利大跌过半 两大股东</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">南京楼市库存达3.9万套 拼首付促销</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	        </ul>
+	      </div>
+	      <!--相关信息-->
+	      <div class="column7">
+	        <div class="column8">
+	          <div class="title16"><a href="#" class="more">更多 &gt;</a>
+	            <h1>资质买卖</h1>
+	          </div>
+	          <ul class="list6">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	        </div>
+	        <div class="column8"  style="float:right">
+	          <div class="title17"><a href="#"  class="more">更多 &gt;</a>
+	            <h1>资质代办</h1>
+	          </div>
+	          <ul class="list6">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	        </div>
+	        <div class="column8">
+	          <div class="title18"><a  href="#"  class="more">更多 &gt;</a>
+	            <h1>资质挂靠</h1>
+	          </div>
+	          <ul class="list6">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	        </div>
+	        <div class="column8"  style="float:right">
+	          <div class="title19"><a href="#"  class="more">更多 &gt;</a>
+	            <h1>资质认证</h1>
+	          </div>
+	          <ul class="list6">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="ad"><img src="/static/default/images/ad.jpg" width="1001" height="90" /></div>
+	  
+	  <!--考试吧-->
+	  <div class="column3">
+	    <div class="title8" id="kaoshiba">
+	      <h1>考试吧</h1>
+	      <h2>证书就是敲门砖，快来考试吧</h2>
+	      <h3>本吧专业提供教材，培训等一切考试相关服务</h3>
+	    </div>
+	    <!--公告-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>考试吧公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left2">
+	          <div class="bd">
+	            <ul class="infoList">
+	              <li>·<a href="#" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">施强：高端专业语言教学</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+			jQuery(".txtMarquee-left2").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	      <div class="total">共有 <font class="f_red"><b>152762</b></font> 条帖子</div>
+	    </div>
+	    <!--分类-->
+	    <div class="fenlei">
+	      <div class="title4"></div>
+	      <div class="species">
+	        <dl>
+	          <dt><a href="#" target="_blank">会计从业</a><a href="#" target="_blank">初级会计职称</a><a href="#" target="_blank">中级会计职称</a><a href="#" target="_blank">注册会计师</a><a href="#" target="_blank"> 证券从业</a><a href="#" target="_blank">银行从业</a><a href="#" target="_blank">注册税务师</a><a href="#" target="_blank">审计师考试</a><a href="#" target="_blank">统计师考试</a><a href="#" target="_blank">统计从业资格</a></dt>
+	          <dt><a href="#" target="_blank">经济师</a><a href="#" target="_blank">企法律顾问</a><a href="#" target="_blank">国际商务师</a><a href="#" target="_blank">报关员</a><a href="#" target="_blank"> 外销员</a><a href="#" target="_blank">单证员</a><a href="#" target="_blank">报检员</a><a href="#" target="_blank">外贸跟单员</a><a href="#" target="_blank">货运代理人</a></dt>
+	          <dt><a href="#" target="_blank">执业药师</a><a href="#" target="_blank">执业护士</a><a href="#" target="_blank">卫生职称</a><a href="#" target="_blank">中医执业</a><a href="#" target="_blank">助理医师</a><a href="#" target="_blank">中西医结合执业</a><a href="#" target="_blank">助理医师</a><a href="#" target="_blank">公共卫生执业</a><a href="#" target="_blank">助理医师</a></dt>
+	          <dt><a href="#" target="_blank">人力资源管理师</a><a href="#" target="_blank">心理咨询师</a><a href="#" target="_blank">企业培训师</a><a href="#" target="_blank">理财规划师</a><a href="#" target="_blank">物流师</a><a href="#" target="_blank">企业管理咨询师</a><a href="#" target="_blank">公共营养师</a><a href="#" target="_blank">职称计算机</a><a href="#" target="_blank">社会工作者</a></dt>
+	        </dl>
+	        <div class="more1"><a href="#">查看更多 &gt;</a></div>
+	      </div>
+	      <!--相关帖子-->
+	      <div class="clear"></div>
+	      <div class="related">
+	        <!--热门排行-->
+	        <div class="ranking">
+	          <div class="title5">
+	            <h1>热门排行</h1>
+	          </div>
+	          <ul class="list1">
+	            <li><span class="hot"></span><a href="#" target="_blank">能源领域反腐风暴刮向电网 违规资金</a></li>
+	            <li><span class="agree"></span><a href="#" target="_blank">中国持有规模跌至14个月新低</a></li>
+	            <li><span class="news"></span><a href="#" target="_blank">绿盒王老吉净利大跌过半 两大股东</a></li>
+	            <li><span class="news"></span><a href="#" target="_blank">南京楼市库存达3.9万套 拼首付促销</a></li>
+	            <li><a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          </ul>
+	          </ul>
+	        </div>
+	        <!--最新贴-->
+	        <div class="column4">
+	          <div class="title6"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	            <h1>最新贴</h1>
+	          </div>
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">魔兽全服第1玩家打游戏1年 高考涨200分</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list2">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	          </ul>
+	        </div>
+	        <!--推荐贴-->
+	        <div class="column4">
+	          <div class="title12"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	            <h1>推荐贴</h1>
+	          </div>
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">长风：美为何将伊拉克这块烫手山芋扔给中国</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list2">
+	            <li><span class="best"></span>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li><span class="best"></span>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li><span class="agree"></span>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li><span class="agree"></span>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <!--工程吧-->
+	  <div class="engineering" >
+	    <div class="title20" id="gongchengba">
+	      <h1>工程吧</h1>
+	      <h2>一切为您着想，这里有您想要的一切</h2>
+	      <h3>找项目、找队伍请注册发布信息，您的需求会在瞬间得到解决</h3>
+	    </div>
+	    <!--公告-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>工程吧公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left3">
+	          <div class="bd">
+	            <ul class="infoList">
+	              <li>·<a href="#" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">施强：高端专业语言教学</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+			jQuery(".txtMarquee-left3").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	      <div class="total">共有 <font class="f_red"><b>152762</b></font> 条帖子</div>
+	    </div>
+	    <div class="engerlist">
+	      <div class="column6">
+	        <div class="title21">
+	          <h1>队伍找活</h1>
+	        </div>
+	        <ul class="list7">
+	          <li><span class="hot"></span>·<a href="#" target="_blank">能源领域反腐风暴刮向电网 违规资金</a></li>
+	          <li><span class="agree"></span>·<a href="#" target="_blank">中国持有规模跌至14个月新低</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">绿盒王老吉净利大跌过半 两大股东</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">南京楼市库存达3.9万套 拼首付促销</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	        </ul>
+	      </div>
+	      <div class="case">
+	        <div class="list_photo">
+	          <dl>
+	            <ul>
+	              <li>
+	                <div><img src="/static/default/images/case1.jpg" width="137" height="84" /></div>
+	                <div class="titles"> <a href="display.html">外媒称美军将进驻菲军南海基地 意图吓阻中国</a></div>
+	              </li>
+	              <li>
+	                <div><img src="/static/default/images/case1.jpg" width="137" height="84" /></div>
+	                <div class="titles"> <a href="#">外媒称美军将进驻菲军南海基地 意图吓阻中国</a> </div>
+	              </li>
+	              <li>
+	                <div><img src="/static/default/images/case1.jpg" width="137" height="84" /></div>
+	                <div class="titles"><a href="#">外媒称美军将进驻菲军南海基地 意图吓阻中国</a> </div>
+	              </li>
+	              <li>
+	                <div><img src="/static/default/images/case1.jpg" width="137" height="84"/></div>
+	                <div class="titles"> <a href="#">外媒称美军将进驻菲军南海基地 意图吓阻中国</a> </div>
+	              </li>
+	            </ul>
+	          </dl>
+	        </div>
+	        <!--信息列表-->
+	        <div class="column9">
+	          <div class="title22"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	            <h1>机械租赁</h1>
+	          </div>
+	          <ul class="list8">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	          </ul>
+	        </div>
+	        <div class="column9" style="float:right">
+	          <div class="title22"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	            <h1>项目发包</h1>
+	          </div>
+	          <ul class="list8">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资金近</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球央行转投</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <!--广告-->
+	  <div class="ad"><img src="/static/default/images/ad1.jpg" /></div>
+	  <!--招聘吧-->
+	  <div class="job">
+	    <div class="title24" id="zhaopinba">
+	      <h1>招聘吧</h1>
+	      <h2>最好、最全、最能干，就在招聘吧</h2>
+	      <h3>这里的有您最想要的人才，和最理想的企业</h3>
+	    </div>
+	    <!--公告-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>招聘吧公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left4">
+	          <div class="bd">
+	            <ul class="infoList">
+	              <li>·<a href="#" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">施强：高端专业语言教学</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+			jQuery(".txtMarquee-left4").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	      <div class="total">共有 <font class="f_red"><b>152762</b></font> 条帖子</div>
+	    </div>
+	    <div class="title23">
+	      <h1>人才库</h1>
+	    </div>
+	    <div class="joblist">
+	      <table width="100%" cellspacing="0" cellpadding="0"  class="tab1">
+	        <tr>
+	          <td width="17%">昵称</td>
+	          <td width="12%">性别</td>
+	          <td width="12%">年龄</td>
+	          <td width="12%">学历</td>
+	          <td width="12%">工作年限</td>
+	          <td width="20%">证书名称</td>
+	          <td width="15%">发布时间</td>
+	        </tr>
+	      </table>
+	      <table width="100%" cellspacing="0" cellpadding="0"  class="tab2">
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	        <tr>
+	          <td width="17%">早安合肥</td>
+	          <td width="12%">男</td>
+	          <td width="12%">30</td>
+	          <td width="12%">本科</td>
+	          <td width="12%">5</td>
+	          <td width="20%">一级建造师</td>
+	          <td width="15%">2014-6-16</td>
+	        </tr>
+	      </table>
+	    </div>
+	  </div>
+	  <!--问问吧-->
+	  <div class="wenwen">
+	    <div class="title25" id="wenwenba">
+	      <h1>问问吧</h1>
+	      <h2>没有做不到，只有想不到，快来问问吧</h2>
+	      <h3></h3>
+	    </div>
+	    <!--公告-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>问问吧公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left5">
+	          <div class="bd">
+	            <ul class="infoList">
+	              <li>·<a href="#" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">施强：高端专业语言教学</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+			jQuery(".txtMarquee-left5").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	      <div class="total">共有 <font class="f_red"><b>152762</b></font> 条帖子</div>
+	    </div>
+	    <div class="wenwenba">
+	      <!--推荐贴-->
+	      <div class="column10">
+	        <div class="title26"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	          <h1>推荐贴</h1>
+	        </div>
+	        <ul class="list9">
+	          <li><span class="hot"></span>·<a href="#" target="_blank">能源领域反腐风暴刮向电网 违规资金</a></li>
+	          <li><span class="agree"></span>·<a href="#" target="_blank">中国持有规模跌至14个月新低</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">绿盒王老吉净利大跌过半 两大股东</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">南京楼市库存达3.9万套 拼首付促销</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	          <li>·<a href="#" target="_blank">煤价续跌煤电联动或启动 上网电价下</a></li>
+	        </ul>
+	      </div>
+	      <div class="wenwenlist">
+	        <div class="conlist">
+	          <div class="column11">
+	            <div class="newtop">
+	              <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	              <div class="title7">
+	                <h2><a href="#">长风：美为何将伊拉克这块烫手山芋扔给中国</a></h2>
+	              </div>
+	            </div>
+	            <ul class="list10">
+	              <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	              <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	              <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	              <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	            </ul>
+	          </div>
+	          <div class="column11" style="float:right">
+	            <div class="newtop">
+	              <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	              <div class="title7">
+	                <h2><a href="#">长风：美为何将伊拉克这块烫手山芋扔给中国</a></h2>
+	              </div>
+	            </div>
+	            <ul class="list10">
+	              <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	              <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	              <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	              <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <div class="column11">
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">长风：美为何将伊拉克这块烫手山芋扔给中国</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list10">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	        </div>
+	        <div class="column11" style="float:right">
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">长风：美为何将伊拉克这块烫手山芋扔给中国</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list10">
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规资</a></li>
+	            <li>·<a href="#">中国持有规模跌至14个月新低 全球</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 违规</a></li>
+	            <li>·<a href="#">能源领域反腐风暴刮向电网 </a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- content// -->
+
+<!--友情链接-->
+<div class="friendlink">
+  <div class="link">
+    <div class="title27">
+      <h1>友情链接</h1>
+    </div>
+    <div class="linklist">
+      <ul>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+        <li><a href="#" target="_blank">远大住工</a></li>
+        <li><a href="#" target="_blank">哈尔滨租房</a></li>
+        <li><a href="#" target="_blank">一级建造师</a></li>
+        <li><a href="#" target="_blank">市场调查报告</a></li>
+        <li><a href="#" target="_blank">长春租房</a></li>
+      </ul>
+    </div>
+    <!--客服热线-->
+    <div class="kefu">
+      <div class="title28">
+        <h1>客服热线</h1>
+      </div>
+      <div class="mobile"><em>400-6257-8588</em> </div>
+      <p>服务时间：<font class="f_blue">9：00-18：00</font></p>
+      <p>服务邮箱：<font class="f_blue">78965858@qq.com</font></p>
+    </div>
+  </div>
+</div>
+<!--底部-->
+<div id="footer">
+  <div class="foot_nav">
+    <div class="bnav"><a href="#">关于我们</a> | <a href="#">隐私权保护</a> | <a href="#">商务洽谈</a> | <a href="#">意见反馈</a> | <a href="#">网站导航</a> | <a href="#">广告服务</a> | <a href="#">服务协议</a> | <a href="#">在线支付</a> | <a href="#">联系我们</a> | <a href="#">帮助中心</a></div>
+  </div>
+  <div class="foot">
+    <dl>
+      Copyright@2014 搜吧挂靠网  All Rights Reserved. Designed by <a href="http://www.wanhu.com.cn" target="_blank">Wanhu</a><br />
+      皖ICP备11056531号-1 网站常年法律顾问：吴劲松律师
+    </dl>
+  </div>
+</div>
+<div id="fl_menu">
+	<div class="menu">
+    	<a href="#guakaoba" class="menu_item">挂靠吧</a>
+        <a href="#zizhiba" class="menu_item">资质吧</a>
+        <a href="#kaoshiba" class="menu_item">考试吧</a>
+        <a href="#gongchengba" class="menu_item">工程吧</a>
+        <a href="#zhaopinba" class="menu_item">招聘吧</a>
+		<a href="#wenwenba" class="menu_item">问问吧</a>
+		<a href="#header" class="scrolltop"></a>
+    </div>
+</div>
+</body>
+</html>
