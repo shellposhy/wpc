@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util                     
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean class="org.apache.ignite.configuration.IgniteConfiguration">
+		<!-- Set to true to enable distributed class loading, default is false. -->
+		<property name="peerClassLoadingEnabled" value="true" />
+		<!-- Enable only some events and leave other ones disabled -->
+		<property name="includeEventTypes">
+			<list>
+				<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_STARTED"/>
+				<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_FINISHED"/>
+				<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_FAILED"/>
+			</list>
+		</property>
+		<!-- Configure thread pool -->
+		<property name="publicThreadPoolSize" value="64" />
+		<property name="systemThreadPoolSize" value="32" />
+	</bean>
+</beans>
