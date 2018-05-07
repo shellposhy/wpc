@@ -60,6 +60,7 @@
 .column9{ width:319px; height:165px; float:left;}
 .column10{ width:319px; height:450px; float:left;}
 .column11{ width:315px; height:190px; float:left;}
+.column_fenlei{ width:1002px; height:210px; overflow:hidden; margin-top:10px;}
 
 /***title***/
 .title{ width:235px; height:38px; line-height:38px; background:url(../images/t1.jpg) no-repeat; overflow:hidden;}
