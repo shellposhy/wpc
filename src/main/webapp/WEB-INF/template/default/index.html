@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>全过程工程咨询网</title>
+	<#include "/lib/default/index_content.ftl">
+	<link href="/static/default/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="/static/default/css/home.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/static/default/script/jquery.js"></script>
+	<script src="/static/default/script/select.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/static/default/script/superslide.2.1.js"></script>
+	<script type="text/javascript" src="/static/default/script/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body>
+	<!--header-->
+	<#include "/lib/default/html/header.html">
+	
+	<!--content-->
+	<div id="container">
+	  <div class="dynamic">
+	    <div class="column1" ecode="econtent1">
+	      <div class="title"><a href="#" target="_blank" class="more">更多 &gt;</a><h1>${econtent1.title}</h1></div>
+	      <ul class="list">
+	      	<@数据日期列表 data=econtent1 行数=8 长度=15 />
+	      </ul>
+	    </div>
+	    <div class="picshow">
+	      <div class="fullSlide" ecode="econtent2">
+	        <div class="bd">
+	          <ul>
+	          	<@焦点轮播图 data=econtent2 行数=5 宽度=502 高度=266 />
+	          </ul>
+	        </div>
+	        <div class="hd"><ul></ul></div>
+	        <span class="prev"></span><span class="next"></span>
+	      </div>
+			<script type="text/javascript">
+				jQuery(".fullSlide").hover(function() {
+					jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+				},
+				function() {
+					jQuery(this).find(".prev,.next").fadeOut()
+				});
+				jQuery(".fullSlide").slide({
+					titCell: ".hd ul",
+					mainCell: ".bd ul",
+					effect: "fold",
+					autoPlay: true,
+					autoPage: true,
+					trigger: "click",
+					startFun: function(i) {
+						var curLi = jQuery(".fullSlide .bd li").eq(i);
+						if ( !! curLi.attr("_src")) {
+							curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+						}
+					}
+				});
+			</script>
+	    </div>
+	    <!--picture slider//-->
+	    <div class="column2" ecode="econtent3">
+	      <div class="title1"><a href="#" target="_blank" class="more">更多 &gt;</a><h1>${econtent3.title}</h1></div>
+	      <ul class="list">
+	      	<@列表 data=econtent3 行数=8 长度=18 />
+	      </ul>
+	    </div>
+	  </div>
+	  <div class="clear"></div>
+	  <!-- news// -->
+
+	 <!-- category -->
+	<#include "/lib/default/html/category.html">
+	  
+	  <!-- first floor -->
+	  <div class="column5">
+	 		<!-- title -->
+		    <div class="title14" id="zizhiba">
+		      <h1>全咨动态</h1>
+		      <h2>全咨动态</h2>
+		      <h3>全咨动态全咨动态全咨动态全咨动态</h3>
+		    </div>
+		    <!-- notice -->
+		    <div class="notice">
+		      <div class="title3">
+		        <h1>公告</h1>
+		      </div>
+		      <div class="con">
+		        <div class="txtMarquee-left1"  ecode="econtent4">
+		          <div class="bd">
+		            <ul class="infoList">
+		            	<@数据日期列表 data=econtent4 行数=8 长度=30 />
+		            </ul>
+		          </div>
+		        </div>
+		        <script type="text/javascript">
+					jQuery(".txtMarquee-left1").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+				</script>
+		      </div>
+		    </div>
+	   	 	<!-- data -->
+	   	 	<div class="zizhi">
+		      <div class="column6" ecode="econtent5">
+		        <div class="title15"><a class="more">更多 &gt;</a>
+		          <h1>${econtent5.title}</h1>
+		        </div>
+		        <ul class="list5">
+		        	<@数据编号列表 data=econtent5 行数=8 长度=18 />
+		        </ul>
+		      </div>
+		      <div class="column7">
+		        <div class="column8" ecode="econtent6">
+		          <div class="title16"><a href="#" class="more">更多 &gt;</a>
+		            <h1>${econtent6.title}</h1>
+		          </div>
+		          <ul class="list6">
+		          	<@列表 data=econtent6 行数=4 长度=18 />
+		          </ul>
+		        </div>
+		        <div class="column8"  style="float:right" ecode="econtent7">
+		          <div class="title17"><a href="#"  class="more">更多 &gt;</a>
+		            <h1>${econtent7.title}</h1>
+		          </div>
+		          <ul class="list6">
+		          	<@列表 data=econtent7 行数=4 长度=18 />
+		          </ul>
+		        </div>
+		        <div class="column8" ecode="econtent8">
+		          <div class="title18"><a  href="#"  class="more">更多 &gt;</a>
+		            <h1>${econtent8.title}</h1>
+		          </div>
+		          <ul class="list6">
+		          	<@列表 data=econtent8 行数=4 长度=18 />
+		          </ul>
+		        </div>
+		        <div class="column8"  style="float:right" ecode="econtent9">
+		          <div class="title19"><a href="#"  class="more">更多 &gt;</a>
+		            <h1>${econtent9.title}</h1>
+		          </div>
+		          <ul class="list6">
+		            <@列表 data=econtent9 行数=4 长度=18 />
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <!-- ad -->
+	  	  <div class="ad"><img src="/static/default/images/ad.jpg" width="1001" height="90" /></div>
+	  
+		  <!--second floor-->
+		  <div class="engineering" >
+		  	<!-- title -->
+		    <div class="title20" id="gongchengba">
+		      <h1>管理咨询</h1>
+		      <h2>管理咨询</h2>
+		      <h3>管理咨询管理咨询管理咨询管理咨询管理咨询</h3>
+		    </div>
+		    <!-- notice -->
+		    <div class="notice">
+		      <div class="title3">
+		        <h1>公告</h1>
+		      </div>
+		      <div class="con">
+		        <div class="txtMarquee-left3" ecode="econtent10">
+		          <div class="bd">
+		            <ul class="infoList">
+		            	<@数据日期列表 data=econtent10 行数=8 长度=30 />
+		            </ul>
+		          </div>
+		        </div>
+		        <script type="text/javascript">
+					jQuery(".txtMarquee-left3").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+				</script>
+		      </div>
+		    </div>
+		    <!-- data -->
+		    <div class="engerlist">
+		      <div class="column6" ecode="econtent11">
+		        <div class="title21">
+		          <h1>${econtent11.title}</h1>
+		        </div>
+		        <ul class="list7">
+		        	<@数据编号列表 data=econtent11 行数=8 长度=18 />
+		        </ul>
+		      </div>
+		      <div class="case">
+		      	<!-- first line -->
+		        <div class="list_photo">
+		          <dl>
+		            <ul>
+		              <li ecode="econtent12"> <@焦点轮播图 data=econtent12 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		               <li ecode="econtent13"> <@焦点轮播图 data=econtent13 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		               <li ecode="econtent14"> <@焦点轮播图 data=econtent15 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		               <li ecode="econtent15"> <@焦点轮播图 data=econtent15 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		            </ul>
+		          </dl>
+		        </div>
+		        <!-- second line -->
+		        <div class="list_photo">
+		          <dl>
+		            <ul>
+		              <li ecode="econtent16"> <@焦点轮播图 data=econtent16 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		               <li ecode="econtent17"> <@焦点轮播图 data=econtent17 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		               <li ecode="econtent18"> <@焦点轮播图 data=econtent18 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		               <li ecode="econtent19"> <@焦点轮播图 data=econtent19 行数=1 长度=18 宽度=137 高度=84 /> </li>
+		            </ul>
+		          </dl>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <!--ad-->
+		  <div class="ad"><img src="/static/default/images/ad1.jpg" /></div>
+	  
+		  <!--third floor-->
+		  <div class="wenwen">
+				<!-- title -->
+			    <div class="title25" id="wenwenba">
+			      <h1>技术咨询</h1>
+			      <h2>技术咨询</h2>
+			      <h3>技术咨询技术咨询技术咨询技术咨询技术咨询</h3>
+			    </div>
+			    <!--notice-->
+			    <div class="notice">
+			      <div class="title3">
+			        <h1>公告</h1>
+			      </div>
+			      <div class="con">
+			        <div class="txtMarquee-left5" ecode="econtent20">
+			          <div class="bd">
+			            <ul class="infoList">
+			            	<@数据日期列表 data=econtent20 行数=8 长度=30 />
+			            </ul>
+			          </div>
+			        </div>
+			        <script type="text/javascript">
+						jQuery(".txtMarquee-left5").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+					</script>
+			      </div>
+			    </div>
+			    <!-- data -->
+			    <div class="wenwenba">
+			      <div class="column10" ecode="econtent21">
+			        <div class="title26"><a href="#" target="_blank" class="more">更多 &gt;</a>
+			          <h1>${econtent21.title}</h1>
+			        </div>
+			        <ul class="list9">
+			        	<@数据编号列表 data=econtent21 行数=12 长度=18 />
+			        </ul>
+			      </div>
+			      <div class="wenwenlist">
+			        <div class="conlist">
+			          <div class="column11" ecode="econtent22">
+			            	<@主图列表 data=econtent22 行数=5 长度=20 />
+			          </div>
+			          <div class="column11" style="float:right" ecode="econtent23">
+			            <@主图列表 data=econtent23 行数=5 长度=20 />
+			          </div>
+			         </div>
+			        <div class="column11" ecode="econtent24">
+			           <@主图列表 data=econtent24 行数=5 长度=20 />
+			        </div>
+			        <div class="column11" style="float:right" ecode="econtent25">
+			          <@主图列表 data=econtent25 行数=5 长度=20 />
+			        </div>
+			      </div>
+		    </div>
+		</div>
+	  
+	   <!--four floor-->
+	  <div class="lingyu">
+	  	<!-- title -->
+	    <div class="title27" id="lingyu">
+	      <h1>涉及领域</h1>
+	      <h2>涉及领域</h2>
+	      <h3>涉及领域涉及领域涉及领域涉及领域涉及领域</h3>
+	    </div>
+	    <!--notice-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left5" ecode="econtent26">
+	          <div class="bd">
+	            <ul class="infoList">
+	            	<@数据日期列表 data=econtent26 行数=8 长度=30 />
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+				jQuery(".txtMarquee-left5").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	    </div>
+	    <!-- data -->
+	    <div class="lingyuba">
+	      <div class="column10" ecode="econtent27">
+	        <div class="title28"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	           <h1>${econtent27.title}</h1>
+	        </div>
+	        <ul class="list9">
+	        	<@数据编号列表 data=econtent27 行数=12 长度=18 />
+	        </ul>
+	      </div>
+	      <div class="lingyulist">
+	        <div class="conlist">
+	          <div class="column11" ecode="econtent28">
+	           	<@主图列表 data=econtent28 行数=5 长度=20 />
+	          </div>
+	          <div class="column11" style="float:right" ecode="econtent29">
+	            <@主图列表 data=econtent29 行数=5 长度=20 />
+	          </div>
+	        </div>
+	        <div class="column11" ecode="econtent30">
+	        	<@主图列表 data=econtent30 行数=5 长度=20 />
+	        </div>
+	        <div class="column11" style="float:right" ecode="econtent31">
+	        	<@主图列表 data=econtent31 行数=5 长度=20 />
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  
+	</div>
+	<!-- content// -->
+
+	<!-- footer -->
+	<#include "/lib/default/html/footer.html">
+	<!-- top bar -->
+	<#include "/lib/default/html/topbar.html">
+</body>
+</html>
