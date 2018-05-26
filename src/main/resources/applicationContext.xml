@@ -58,8 +58,8 @@
 	<bean id="appConfig" class="cn.com.cms.framework.config.AppConfig">
 		<property name="appName" value="新闻发布系统" />
 		<property name="appPath" value="" />
-		<property name="appPathHome" value="D:/resource/wpc" />
-		<property name="templatePath" value="D:/resource/cms/wpc" />
+		<property name="appPathHome" value="D:/resource/data" />
+		<property name="templatePath" value="D:/resource/data/template" />
 		<property name="appLogSwitch" value="1"/>
 		<property name="templateHome" value="template" />
 		<property name="adminDataTablePageSize" value="20" />

@@ -28,6 +28,7 @@
 .species1 dt a:hover{ color:#6eb31d;}
 .species1 .more1{width:85px; height:26px; line-height:26px; border:1px solid #6eb31d; background:#f6f6f6; text-align:center; float:left; margin:10px;}
 .species1 .more1{ font-size:12px; color:#666;}
+.species1 .bold{font-weight: bold;}
 
 .related{ width:1002px; height:250px; margin-top:10px;}
 .ranking{ width:319px; height:250px; float:left; background:url(../images/num.jpg) bottom no-repeat; float:left; margin-top:10px;}
@@ -47,6 +48,9 @@
 .wenwenba{ width:1002px; height:450px;}
 .wenwenlist{ width:660px; height:450px; float:right;}
 .conlist{ width:660px; height:210px; border-bottom:1px solid #e5e5e5; margin-bottom:10px;}
+.lingyu{width:1002px; height:545px; margin-top:10px; overflow:hidden;}
+.lingyuba{ width:1002px; height:450px;}
+.lingyulist{ width:660px; height:450px; float:right;}
 
 /***column***/
 .column1{ width:235px; height:266px; float:left; border-right:1px solid #dbdbdb;}
@@ -168,6 +172,14 @@
 .title26 h1{ font-size:14px; font-weight:bold; color:#ee9540; padding-left:10px;}
 .title26 a.more{ float:right; font-size:12px; color:#a5a5a5; padding-right:10px;}
 
+.title27{ width:1002px; height:50px; background:url(../images/ly.jpg) no-repeat; color:#fff;}
+.title27 h1{ width:238px; font-family:"微软雅黑"; font-size:24px; padding-top:10px; text-align:center; float:left; text-shadow:1px 1px 1px #000;color:#fff;}
+.title27 h2{ width:340px; font-family:"微软雅黑"; font-size:17px; padding-top:15px; text-align:left; float:left; text-shadow:1px 1px 1px #000;}
+.title27 h3{ width:340px; font-size:12px; float:right; padding-top:15px; padding-right:10px; text-shadow:1px 1px 1px #3ca0ed;}
+
+.title28{ width:319px; height:33px; line-height:33px; background:url(../images/ph5.jpg) no-repeat;}
+.title28 h1{ font-size:14px; font-weight:bold; color:#ee9540; padding-left:10px;}
+.title28 a.more{ float:right; font-size:12px; color:#a5a5a5; padding-right:10px;}
 
 /***list***/
 .list{ margin:10px 0px;}

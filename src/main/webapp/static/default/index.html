@@ -9,82 +9,72 @@
 	<script src="/static/default/script/select.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/static/default/script/superslide.2.1.js"></script>
 	<script type="text/javascript" src="/static/default/script/jquery.SuperSlide.2.1.1.js"></script>
-	<script type="text/javascript">
-		var menuPosition;
-		$(window).load(function(){
-			menuPosition=$('#fl_menu').position().top;
-			FloatMenu();
-		});
-		function FloatMenu(){
-			var animationSpeed=1500;
-			var animationEasing='easeOutQuint';
-			var scrollAmount=$(document).scrollTop();
-			var newPosition=menuPosition+scrollAmount;
-			if($(window).height()<$('#fl_menu').height()+$('#fl_menu .menu').height()){
-				$('#fl_menu').css('top',menuPosition);
-			} else {
-				$('#fl_menu').stop().animate({top: newPosition}, animationSpeed, animationEasing);
-			}
-		}
-		$(window).scroll(function(){
-			FloatMenu();
-		});
-		$(document).ready(function(){
-			var fadeSpeed=500;
-			$("#fl_menu").hover(function(){
-				$('#fl_menu .label').fadeTo(fadeSpeed, 1);
-				$("#fl_menu .menu").fadeIn(fadeSpeed);
-			},function(){
-				$('#fl_menu .label').fadeTo(fadeSpeed, 0.75);
-			});
-		});
-	</script>
 </head>
 
 <body>
 
 	<!--header-->
-	<div id="header">
+		<div id="header">
 		<!-- top -->
-	  <div class="top">
-	    <div class="topT">
-	      <div class="topTL"><a href="#" target="_blank">设为首页</a><a href="#" target="_blank">网站地图</a><a href="#" target="_blank" class="nobg"> 帮助中心</a></div>
-	      <div class="topTR"> <span class="reg">您好，请<a href="#" target="_blank" class="on">登录</a> | <a href="#" target="_blank">注册</a></span> <span class="login">其他方式登录 <a href="#" target="_blank"><img src="/static/default/images/qq.jpg" /></a> <a href="#" target="_blank"><img src="/static/default/images/wb.jpg" /></a></span> </div>
-	    </div>
-	    <div class="topB">
-	      <div class="logo"><a href="#" title="全过程咨询网"><img src="/static/default/images/logo.png"/ width="215" height="90"  alt="全过程咨询网" ></a></div>
-	      <div class="slogan"><img src="/static/default/images/slogan.jpg" /></div>
-	      <div class="hotline"> <span>客服热线:</span><em>400-0000-0000</em> </div>
-	    </div>
-	  </div>
-	  <!-- top// -->
-	  <!--search-->
-	  <div class="search">
-	    <div class="searchbox">
-	      <form action="#" method="get">
-	        <div class="column">
-	          <h1><a href="#" class="hover">全资动态</a></h1>
-	          <h1><a href="#">管理咨询</a></h1>
-	          <h1><a href="#">技术咨询</a></h1>
-	          <h1><a href="#">涉及领域</a></h1>
-	        </div>
-	        <div class="searchM">
-	          <input type="text" class="input" value="请输入搜索内容" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入搜索内容';}"/>
-	          <input type="image" name="imageField" src="/static/default/images/search.jpg"  class="input1"/>
-	        </div>
-	        <div class="select">
-	          <label>
-	          <input type="hidden" id= "isRemember" name="isRemember">
-	          <img id="aa" src="/static/default/images/checkedon.jpg" onclick="myFun(this)" align="absmiddle" > </label>
-	          文章
-	           </div>
-	      </form>
-	    </div>
-	  </div>
-	  <!-- search// -->
+		<div class="top">
+			<div class="topT">
+				<div class="topTL">
+					<a href="#" target="_blank">设为首页</a>
+					<a href="#" target="_blank">网站地图</a>
+					<a href="#" target="_blank" class="nobg"> 帮助中心</a>
+				</div>
+				<div class="topTR">
+					<span class="reg">
+						您好，请
+						<a href="#" target="_blank" class="on">登录</a> | 
+						<a href="#" target="_blank">注册</a>
+					</span>
+					<span class="login">
+						其他方式登录
+						<a href="#" target="_blank"><img src="/static/default/images/qq.jpg" /></a>
+						<a href="#" target="_blank"><img src="/static/default/images/wb.jpg" /></a>
+					</span>
+				</div>
+			</div>
+			<div class="topB">
+				<div class="logo">
+					<a href="#" title="全过程咨询网"><img src="/static/default/images/logo.png" / width="215" height="90" alt="全过程咨询网"></a>
+				</div>
+				<div class="slogan">
+					<img src="/static/default/images/slogan.jpg" />
+				</div>
+				<div class="hotline">
+					<span>客服热线:</span><em>400-0000-0000</em>
+				</div>
+			</div>
+		</div>
+		<!-- top// -->
+		
+		<!--search-->
+		<div class="search">
+			<div class="searchbox">
+				<form action="#" method="get">
+					<div class="column">
+						<h1><a href="#" class="hover">全资动态</a></h1>
+						<h1><a href="#">管理咨询</a></h1>
+						<h1><a href="#">技术咨询</a></h1>
+						<h1><a href="#">涉及领域</a></h1>
+					</div>
+					<div class="searchM">
+						<input type="text" class="input" value="请输入搜索内容" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入搜索内容';}" />
+						<input type="image" name="imageField" src="/static/default/images/search.jpg" class="input1" />
+					</div>
+					<div class="select">
+						<label> 
+							<input type="hidden" id="isRemember" name="isRemember"> <img id="aa" src="/static/default/images/checkedon.jpg" onclick="myFun(this)" align="absmiddle">
+						</label>文章
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- search// -->
 	</div>
 	<div class="clear"></div>
-	<!-- header// -->
 	
 	<!--content-->
 	<div id="container">
@@ -165,20 +155,22 @@
 	      <div class="species1">
 	        <dl>
 	          <dt>
+	          	<a href="#" target="_blank" class="bold">全咨动态</a>
 	          	<a href="#" target="_blank">国家政策</a>
 	          	<a href="#" target="_blank">地方政策</a>
 	          	<a href="#" target="_blank">试点企业</a>
 	          	<a href="#" target="_blank">科研课题</a>
-	          	<a href="#" target="_blank">管理咨询</a>
+	          	<a href="#" target="_blank">全咨推广</a>
 	          	<a href="#" target="_blank">全资会议</a>
 	          	<a href="#" target="_blank">全资平台</a>
 	          	<a href="#" target="_blank">范例介绍</a>
 	          	<a href="#" target="_blank">管理标准</a>
 	          	<a href="#" target="_blank">技术标准</a>
 	          	<a href="#" target="_blank">全咨法务</a>
-	          	<a href="#" target="_blank">项目合作</a>
+	          	
 	          </dt>
 	          <dt>
+	          	<a href="#" target="_blank" class="bold">管理咨询</a>
 	          	<a href="#" target="_blank">项目策划</a>
 	          	<a href="#" target="_blank">报批报建</a>
 	          	<a href="#" target="_blank">勘察管理</a>
@@ -189,9 +181,9 @@
 	          	<a href="#" target="_blank">施工组织管理</a>
 	          	<a href="#" target="_blank">参建单位管理</a>
 	          	<a href="#" target="_blank">验收管理</a>
-	          	<a href="#" target="_blank">其他</a>
 	          </dt>
 	          <dt>
+	          	<a href="#" target="_blank" class="bold">技术咨询</a>
 	          	<a href="#" target="_blank">投资咨询</a>
 	          	<a href="#" target="_blank">工程勘察</a>
 	          	<a href="#" target="_blank">工程设计</a>
@@ -199,11 +191,12 @@
 	          	<a href="#" target="_blank">造价咨询</a>
 	          	<a href="#" target="_blank">工程监理</a>
 	          	<a href="#" target="_blank">维护运营</a>
-	          	<a href="#" target="_blank">BIM技术咨询管理</a>
+	          	<a href="#" target="_blank">BIM技术咨询</a>
 	          	<a href="#" target="_blank">其他技术推广</a>
 	          	<a href="#" target="_blank">技术产品数据库</a>
 	          </dt>
 	          <dt>
+	          	<a href="#" target="_blank"  class="bold">涉及领域</a>
 	          	<a href="#" target="_blank">公共及民用领域</a>
 	          	<a href="#" target="_blank">轨道交通</a>
 	          	<a href="#" target="_blank">市政基础</a>
@@ -530,15 +523,126 @@
 	      </div>
 	    </div>
 	  </div>
+	  
+	   <!--four floor-->
+	  <div class="lingyu">
+	    <div class="title27" id="lingyu">
+	      <h1>涉及领域</h1>
+	      <h2>涉及领域</h2>
+	      <h3>涉及领域涉及领域涉及领域涉及领域涉及领域</h3>
+	    </div>
+	    <!--公告-->
+	    <div class="notice">
+	      <div class="title3">
+	        <h1>公告</h1>
+	      </div>
+	      <div class="con">
+	        <div class="txtMarquee-left5">
+	          <div class="bd">
+	            <ul class="infoList">
+	              <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a><span>[11-11]</span></li>
+	              <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a><span>[11-11]</span></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <script type="text/javascript">
+				jQuery(".txtMarquee-left5").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+			</script>
+	      </div>
+	      <div class="total">共有 <font class="f_red"><b>152762</b></font> 条帖子</div>
+	    </div>
+	    <div class="lingyuba">
+	      <!--推荐贴-->
+	      <div class="column10">
+	        <div class="title28"><a href="#" target="_blank" class="more">更多 &gt;</a>
+	          <h1>造价咨询</h1>
+	        </div>
+	        <ul class="list9">
+	          <li><span class="hot"></span>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li><span class="agree"></span>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li><span class="news"></span>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	          <li>·<a href="#" target="_blank">中国全工程工程咨询管理平台</a></li>
+	        </ul>
+	      </div>
+	      <div class="lingyulist">
+	        <div class="conlist">
+	          <div class="column11">
+	            <div class="newtop">
+	              <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	              <div class="title7">
+	                <h2><a href="#">工程勘察</a></h2>
+	              </div>
+	            </div>
+	            <ul class="list10">
+	              <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	              <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	              <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	              <li>·<a href="#">中国全工程工程咨询管理平台 </a></li>
+	            </ul>
+	          </div>
+	          <div class="column11" style="float:right">
+	            <div class="newtop">
+	              <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	              <div class="title7">
+	                <h2><a href="#">工程设计</a></h2>
+	              </div>
+	            </div>
+	            <ul class="list10">
+	              <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	              <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	              <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	              <li>·<a href="#">中国全工程工程咨询管理平台 </a></li>
+	            </ul>
+	          </div>
+	        </div>
+	        <div class="column11">
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">工程监理</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list10">
+	            <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	            <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	            <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	            <li>·<a href="#">中国全工程工程咨询管理平台 </a></li>
+	          </ul>
+	        </div>
+	        <div class="column11" style="float:right">
+	          <div class="newtop">
+	            <div class="toppic"><a href="#"><img src="/static/default/images/pic1.jpg" width="108" height="70" /></a></div>
+	            <div class="title7">
+	              <h2><a href="#">BIM咨询</a></h2>
+	            </div>
+	          </div>
+	          <ul class="list10">
+	            <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	            <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	            <li>·<a href="#">中国全工程工程咨询管理平台</a></li>
+	            <li>·<a href="#">中国全工程工程咨询管理平台 </a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 	</div>
 	<!-- content// -->
 
 <!--友情链接-->
 <div class="friendlink">
   <div class="link">
-    <div class="title27">
-      <h1>友情链接</h1>
-    </div>
     <div class="linklist">
       <ul>
         <li><a href="#" target="_blank">综勘院</a></li>
@@ -599,13 +703,46 @@
   </div>
 </div>
 
+<!-- floor menu -->
+<script type="text/javascript">
+	var menuPosition;
+	$(window).load(function(){
+		menuPosition=$('#fl_menu').position().top;
+		FloatMenu();
+	});
+	function FloatMenu(){
+		var animationSpeed=1500;
+		var animationEasing='easeOutQuint';
+		var scrollAmount=$(document).scrollTop();
+		var newPosition=menuPosition+scrollAmount;
+		if($(window).height()<$('#fl_menu').height()+$('#fl_menu .menu').height()){
+			$('#fl_menu').css('top',menuPosition);
+		} else {
+			$('#fl_menu').stop().animate({top: newPosition}, animationSpeed, animationEasing);
+		}
+	}
+	$(window).scroll(function(){
+		FloatMenu();
+	});
+	$(document).ready(function(){
+		var fadeSpeed=500;
+		$("#fl_menu").hover(function(){
+			$('#fl_menu .label').fadeTo(fadeSpeed, 1);
+			$("#fl_menu .menu").fadeIn(fadeSpeed);
+		},function(){
+			$('#fl_menu .label').fadeTo(fadeSpeed, 0.75);
+		});
+	});
+</script>
 <div id="fl_menu">
 	<div class="menu">
         <a href="#zizhiba" class="menu_item">全咨动态</a>
         <a href="#gongchengba" class="menu_item">管理咨询</a>
 		<a href="#wenwenba" class="menu_item">技术咨询</a>
+		<a href="#lingyu" class="menu_item">涉及领域</a>
 		<a href="#header" class="scrolltop"></a>
     </div>
 </div>
+
 </body>
 </html>
