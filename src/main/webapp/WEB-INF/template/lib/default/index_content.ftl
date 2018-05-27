@@ -56,7 +56,7 @@
 	<#if data?exists && (data.list?size gt 0)>
 		<#list data.list as item>
 			<div><img src="${item.img}" width="${宽度}" height="${高度}" /></div>
-		    <div class="titles"> <a href="${item.href}">${substrbyte(item.title, 长度, '...')}</a></div>
+		    <div class="titles"> [${data.title}]<a href="${item.href}">${substrbyte(item.title, 长度, '...')}</a></div>
 		</#list>
 	<#else>
 		<br>未配置
