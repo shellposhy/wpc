@@ -2,8 +2,9 @@ package cn.com.cms.framework.base.template;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -74,7 +75,8 @@ public class TemplateComposer {
 	public static String readTemplate(String filePath) {
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader(new File(filePath)));
+			InputStreamReader isr = new InputStreamReader(new FileInputStream(new File(filePath)), "UTF-8");
+			BufferedReader reader = new BufferedReader(isr);
 			String temp = "";
 			while ((temp = reader.readLine()) != null) {
 				stringBuilder.append(temp);
@@ -116,7 +118,7 @@ public class TemplateComposer {
 					if (content.contains("@主图列表")) {
 						viewItem.setItemType(EItemType.OneImgList);
 					} else if (content.contains("@焦点轮播图") || content.contains("@友情链接") || content.contains("@图片新闻列表")
-							|| content.contains("@首页轮播图")) {
+							|| content.contains("@首页轮播图") || content.contains("单图新闻")) {
 						viewItem.setItemType(EItemType.ImgList);
 					} else if (content.contains("@标签列表")) {
 						viewItem.setItemType(EItemType.Sort);
