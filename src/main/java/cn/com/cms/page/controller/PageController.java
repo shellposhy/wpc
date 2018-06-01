@@ -1,4 +1,4 @@
-package cn.com.cms.page.controller.base;
+package cn.com.cms.page.controller;
 
 import java.io.IOException;
 import java.util.Date;
@@ -51,7 +51,7 @@ import cn.com.cms.framework.config.SystemConstant;
  * @version 1.0
  */
 @Controller
-@RequestMapping("/page/default")
+@RequestMapping("/page")
 public class PageController extends BaseController {
 	private static final Logger log = LoggerFactory.getLogger(PageController.class.getName());
 	@Resource
@@ -119,6 +119,8 @@ public class PageController extends BaseController {
 	public String list(@PathVariable String type, @PathVariable int id, HttpServletRequest request, Model model) {
 		log.debug("===page.list===");
 		BaseLibrary<?> dataBase = libraryService.find(id);
+		Integer parentId = dataBase.getParentID();
+		BaseLibrary<?> parentBase = parentId.intValue() != 0 ? libraryService.find(parentId) : null;
 		Integer first = Strings.isNullOrEmpty(request.getParameter("pageNum")) ? 1
 				: Integer.valueOf(request.getParameter("pageNum"));
 		Integer start = (first - 1) * appConfig.getAdminDataTablePageMinSize();
@@ -136,8 +138,6 @@ public class PageController extends BaseController {
 		if (null != searchResult && null != searchResult.documents && searchResult.documents.length > 0) {
 			for (Document document : searchResult.documents) {
 				DataVo vo = new DataVo(document);
-				// 系统默认图片
-				vo.setImg("/static/flatlab/img/default.jpg");
 				if (!Strings.isNullOrEmpty(document.get(FieldCodes.DOC_TIME))) {
 					String docTime = document.get(FieldCodes.DOC_TIME);
 					vo.setMonth(DateTimeUtil.formatDateTimeStr(docTime, "yyyyMMddHHmmss", "MM"));
@@ -161,8 +161,9 @@ public class PageController extends BaseController {
 		model.addAttribute("dataList", result);
 		model.addAttribute("paging", paging);
 		model.addAttribute("dataBase", dataBase);
+		model.addAttribute("parentBase", parentBase);
 		model.addAttribute("type", type);
-		return type + "/channel";
+		return type + "/list";
 	}
 
 	/**

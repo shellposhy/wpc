@@ -161,7 +161,6 @@ public class ViewModelService {
 		ViewModel viewModel = find(id);
 		String templateFilePath = appConfig.getTemplatePath() + "/" + viewModel.getCode();
 		String content = TemplateComposer.readTemplate(templateFilePath + "/index.html");
-		System.out.println("=content="+content);
 		String classesPath = ViewPublishService.class.getResource("/").getPath();
 		String targetPath = classesPath.substring(0, classesPath.indexOf("WEB-INF")) + "WEB-INF/"
 				+ appConfig.getTemplateHome();
