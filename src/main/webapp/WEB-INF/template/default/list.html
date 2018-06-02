@@ -34,7 +34,7 @@
 	      	<#if dataList?exists && (dataList?size gt 0)>
 	      		<#list dataList as item>
 			        <tr>
-			          <td width="70%">·<a href="#" target="_blank">${item.title!''}</a></td>
+			          <td width="70%">·<a href="/page/default/${item.tableId}_${item.id}" target="_blank">${item.title!''}</a></td>
 			          <td width="15%" align="center">${item.authors!''}</td>
 			          <td width="15%" align="center">${item.docTime!''}</td>
 			        </tr>
