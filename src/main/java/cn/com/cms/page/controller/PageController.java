@@ -25,6 +25,7 @@ import com.google.common.collect.Lists;
 
 import cn.com.cms.library.constant.EDataType;
 import cn.com.cms.library.model.BaseLibrary;
+import cn.com.cms.library.model.DataBase;
 import cn.com.cms.library.service.LibraryDataService;
 import cn.com.cms.library.service.LibraryService;
 import cn.com.cms.library.vo.AttachVo;
@@ -164,6 +165,70 @@ public class PageController extends BaseController {
 		model.addAttribute("parentBase", parentBase);
 		model.addAttribute("type", type);
 		return type + "/list";
+	}
+
+	/**
+	 * 搜索
+	 * 
+	 * @param request
+	 * @param id
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	@RequestMapping("/search")
+	public String search(HttpServletRequest request, Model model) {
+		Integer type = Integer.valueOf(request.getParameter("type"));
+		String word = request.getParameter("word");
+		Integer pageNum = null != request.getParameter("pageNum") ? Integer.valueOf(request.getParameter("pageNum"))
+				: 1;
+		int pageSize = appConfig.getAdminDataTablePageSize();
+		int pageStart = (pageNum.intValue() - 1) * pageSize;
+		String queryString = "";
+		if (Strings.isNullOrEmpty(word)) {
+			queryString = "*:*";
+		} else {
+			queryString = "Title:" + word.trim() + " OR Content:" + word.trim();
+		}
+		List<DataBase> dblist = (List<DataBase>) libraryService.findByParentId(type);
+		Integer[] dbIds = new Integer[dblist.size()];
+		for (int i = 0; i < dblist.size(); i++) {
+			dbIds[i] = dblist.get(i).getId();
+		}
+		PepperSortField[] dsSortFieldsArray = {
+				new PepperSortField(FieldCodes.DOC_TIME, DataUtil.dataType2SortType(EDataType.DateTime), true) };
+		String[] hightLightFields = { FieldCodes.TITLE };
+		PepperResult searchResult = libraryDataService.searchIndex(queryString,
+				appConfig.getDefaultIndexSearchNumHits(), dsSortFieldsArray, hightLightFields, pageStart,
+				appConfig.getAdminDataTablePageSize(), dbIds);
+		List<DataVo> result = Lists.newArrayList();
+		PagingUtil paging = null;
+		if (null != searchResult && null != searchResult.documents && searchResult.documents.length > 0) {
+			for (Document document : searchResult.documents) {
+				DataVo vo = new DataVo(document);
+				if (!Strings.isNullOrEmpty(document.get(FieldCodes.DOC_TIME))) {
+					String docTime = document.get(FieldCodes.DOC_TIME);
+					vo.setMonth(DateTimeUtil.formatDateTimeStr(docTime, "yyyyMMddHHmmss", "MM"));
+					vo.setYear(DateTimeUtil.formatDateTimeStr(docTime, "yyyyMMddHHmmss", "yyyy"));
+					vo.setDay(DateTimeUtil.formatDateTimeStr(docTime, "yyyyMMddHHmmss", "dd"));
+				}
+				if (!Strings.isNullOrEmpty(document.get(FieldCodes.TABLE_ID))
+						&& !Strings.isNullOrEmpty(document.get(FieldCodes.ID))) {
+					List<String> imgs = libraryDataService.findDataImgs(
+							Integer.valueOf(document.get(FieldCodes.TABLE_ID)),
+							Integer.valueOf(document.get(FieldCodes.ID)));
+					if (null != imgs && imgs.size() > 0) {
+						vo.setImg(imgs.get(0));
+					}
+				}
+				result.add(vo);
+			}
+			paging = new PagingUtil(appConfig.getAdminDataTablePageMinSize(), pageNum, searchResult.totalHits);
+		}
+		model.addAttribute("dataList", result);
+		model.addAttribute("paging", paging);
+		model.addAttribute("word", word);
+		model.addAttribute("searchType", type);
+		return "default/search";
 	}
 
 	/**

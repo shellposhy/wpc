@@ -46,8 +46,9 @@ a:hover {color:#2f9def; text-decoration:none;}
 .search{ width:955px; height:131px; margin:0 auto;}
 .searchbox{ width:680px; height:131px; float:left;}
 .column{ width:680px; height:26px; line-height:26px; margin:10px auto;}
+.column .hover{ background:url(../images/hover.jpg) center no-repeat;}
 .column h1{ width:75px; height:26px; line-height:26px; float:left; background:url(../images/nobg.jpg) right center no-repeat; padding:0px 5px;}
-.column h1 a{ display:block; text-align:center; font-size:14px; font-weight:bold; color:#fff; }
+.column h1 a{ display:block; text-align:center; font-size:14px; font-weight:bold; color:#fff; cursor: pointer;}
 .column h1 a:hover,.column h1 a.hover{ background:url(../images/hover.jpg) center no-repeat;}
 .column h1.nobg{ background:none;}
 .searchM{ width:680px; height:39px; line-height:39px;}
